@@ -1461,9 +1461,16 @@ function copyLibraryItem(lib, key) {
     showToast(`"${key}" copied to clipboard!`, 'success');
   });
 
-  // Show in preview if camera
-  if (lib === 'camera') {
-    document.getElementById('camera-preview').textContent = text;
+  // Update camera preview for camera, composition, and cameraMovement
+  if (lib === 'camera' || lib === 'composition' || lib === 'cameraMovement') {
+    const preview = document.getElementById('camera-preview');
+    if (preview) preview.textContent = text;
+  }
+
+  // Update audio preview for music and sound effects
+  if (lib === 'music' || lib === 'soundEffects') {
+    const preview = document.getElementById('audio-prompt');
+    if (preview) preview.textContent = text;
   }
 }
 
