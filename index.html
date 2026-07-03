@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fact Horizon — AI Video Prompt Generator</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+<body>
+  <div class="app-container">
+    <!-- ── Sidebar ────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <div class="sidebar-logo-icon">🎬</div>
+          <h1>The Fact Horizon</h1>
+        </div>
+        <div class="sidebar-logo-sub">Creator Package v1.0</div>
+      </div>
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <!-- Built by JS -->
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ───────────────────────────────── -->
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h2 class="header-title" id="header-title">Dashboard</h2>
+          <span class="header-badge">v1.0</span>
+        </div>
+        <div class="header-right">
+          <button class="btn btn-sm btn-ghost" onclick="navigateTo('prompt-builder')">🎬 Quick Prompt</button>
+          <button class="btn btn-sm btn-secondary" onclick="navigateTo('quality')">✅ Checklist</button>
+          <button class="btn btn-sm btn-ghost" onclick="openHelp()" title="Help & Guide (F1)">❓ Help</button>
+        </div>
+      </header>
+
+      <div class="content-scroll" id="content-area">
+        <!-- Built by JS -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating Help Button -->
+  <button class="help-fab help-fab-pulse" id="help-fab" onclick="openHelp()" title="Help & Guide (F1)">?</button>
+
+  <!-- Help Modal -->
+  <div class="help-overlay" id="help-overlay" onclick="if(event.target===this)closeHelp()">
+    <div class="help-modal">
+      <div class="help-modal-header">
+        <h2>📖 Help & Guide</h2>
+        <button class="help-modal-close" onclick="closeHelp()" title="Close (Esc)">✕</button>
+      </div>
+      <div class="help-tabs" id="help-tabs">
+        <button class="help-tab active" data-tab="quickstart" onclick="switchHelpTab('quickstart')">🚀 Quick Start</button>
+        <button class="help-tab" data-tab="sections" onclick="switchHelpTab('sections')">📋 Section Guide</button>
+        <button class="help-tab" data-tab="workflows" onclick="switchHelpTab('workflows')">🔄 Workflows</button>
+        <button class="help-tab" data-tab="shortcuts" onclick="switchHelpTab('shortcuts')">⌨️ Shortcuts</button>
+        <button class="help-tab" data-tab="tips" onclick="switchHelpTab('tips')">💡 Pro Tips</button>
+      </div>
+      <div class="help-body" id="help-body">
+        <!-- Built by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/libraries.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
